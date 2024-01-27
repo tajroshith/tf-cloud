@@ -13,7 +13,7 @@ resource "aws_subnet" "tf-public-subnets" {
   cidr_block = element(var.tf-public-subnets, count.index)
   availability_zone = element(var.azones, count.index)
   tags = merge(var.tags, {
-    "Name" = "${upper(tf-public-subnets)}-${count.index + 1}"
+    "Name" = "tf-public-subnets-${count.index + 1}"
   }
  )
 }
@@ -24,7 +24,7 @@ resource "aws_subnet" "tf-private-subnets" {
   cidr_block = element(var.tf-private-subnets, count.index)
   availability_zone = element(var.azones, count.index)
   tags = merge(var.tags, {
-    "Name" = "${upper(tf-private-subnets)}-${count.index + 1}"
+    "Name" = "tf-private-subnets-${count.index + 1}"
   }
  )
 }
