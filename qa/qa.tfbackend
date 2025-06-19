@@ -1,0 +1,2 @@
+bucket       = "qa-eks-final-state"
+key          = "remote.terraform.tfstate"
